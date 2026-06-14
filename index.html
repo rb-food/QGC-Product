@@ -1,0 +1,1480 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>俏果初 - 产品展示书 2026</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&family=Noto+Serif+SC:wght@400;600;700&display=swap');
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --lime: #A8D948;
+  --lime-dark: #7CB830;
+  --lemon: #F7E84E;
+  --orange: #FF9F43;
+  --grapefruit: #FF6B6B;
+  --grapefruit-dark: #E84545;
+  --honeygold: #D4A843;
+  --citrus-light: #FFF9E6;
+  --citrus-cream: #FFFDF5;
+  --mint: #E8F5E9;
+  --mint-dark: #4CAF50;
+  --text-dark: #2C2C2A;
+  --text-body: #4A4A48;
+  --text-light: #7A7A78;
+  --white: #FFFFFF;
+  --page-bg: #F9F7F2;
+  --shadow-soft: 0 4px 20px rgba(0,0,0,0.06);
+  --shadow-card: 0 8px 32px rgba(0,0,0,0.08);
+  --shadow-hover: 0 12px 40px rgba(0,0,0,0.12);
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-xl: 32px;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: var(--text-body);
+  background: var(--page-bg);
+  line-height: 1.8;
+  -webkit-font-smoothing: antialiased;
+}
+
+.page-wrapper {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ============ COVER ============ */
+.cover {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(165deg, #E8F8D4 0%, #FFF9E6 30%, #FFE8CC 60%, #F9F7F2 100%);
+  padding: 60px 24px;
+}
+
+.cover::before {
+  content: '';
+  position: absolute;
+  top: -120px;
+  right: -120px;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(168,217,72,0.25) 0%, transparent 70%);
+}
+
+.cover::after {
+  content: '';
+  position: absolute;
+  bottom: -80px;
+  left: -80px;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,159,67,0.2) 0%, transparent 70%);
+}
+
+.cover-content { position: relative; z-index: 2; }
+
+.cover-badge {
+  display: inline-block;
+  padding: 8px 24px;
+  border-radius: 40px;
+  background: rgba(168,217,72,0.2);
+  color: var(--lime-dark);
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  margin-bottom: 32px;
+}
+
+.cover-logo {
+  font-family: 'Noto Serif SC', serif;
+  font-size: 72px;
+  font-weight: 700;
+  color: var(--text-dark);
+  letter-spacing: 12px;
+  margin-bottom: 16px;
+}
+
+.cover-logo .dot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background: var(--lime);
+  border-radius: 50%;
+  vertical-align: super;
+  margin-left: 4px;
+}
+
+.cover-tagline {
+  font-size: 22px;
+  color: var(--text-light);
+  font-weight: 300;
+  letter-spacing: 6px;
+  margin-bottom: 48px;
+}
+
+.cover-products {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 60px;
+}
+
+.cover-products img {
+  width: 120px;
+  height: 120px;
+  border-radius: 20px;
+  object-fit: cover;
+  box-shadow: var(--shadow-card);
+  transition: transform 0.3s ease;
+}
+
+.cover-products img:hover {
+  transform: scale(1.08);
+}
+
+.cover-product-chips {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 60px;
+}
+
+.cover-product-chip {
+  padding: 12px 28px;
+  border-radius: 40px;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.chip-lemon { background: #FFF3B0; color: #9A7B10; }
+.chip-orange { background: #FFE0B2; color: #C75B00; }
+.chip-grapefruit { background: #FFCDD2; color: #C62828; }
+
+.cover-meta {
+  font-size: 13px;
+  color: var(--text-light);
+  letter-spacing: 3px;
+}
+
+/* ============ SECTIONS ============ */
+section {
+  padding: 80px 0;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.section-number {
+  display: inline-block;
+  font-family: 'Noto Serif SC', serif;
+  font-size: 14px;
+  color: var(--lime-dark);
+  letter-spacing: 4px;
+  margin-bottom: 12px;
+}
+
+.section-title {
+  font-family: 'Noto Serif SC', serif;
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--text-dark);
+  letter-spacing: 4px;
+  margin-bottom: 12px;
+}
+
+.section-divider {
+  width: 48px;
+  height: 3px;
+  background: var(--lime);
+  border-radius: 2px;
+  margin: 16px auto;
+}
+
+.section-subtitle {
+  font-size: 15px;
+  color: var(--text-light);
+  letter-spacing: 1px;
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+/* ============ BRAND MEANING ============ */
+.brand-meaning {
+  background: var(--white);
+  position: relative;
+}
+
+.brand-meaning .brand-visual {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.brand-meaning .brand-visual img {
+  width: 320px;
+  height: auto;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-soft);
+  max-width: 100%;
+}
+
+@media (max-width: 768px) {
+  .brand-meaning .brand-visual img { width: 100%; }
+}
+
+.meaning-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.meaning-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 40px 28px;
+  text-align: center;
+  box-shadow: var(--shadow-card);
+  border: 1px solid rgba(0,0,0,0.04);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.meaning-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+}
+
+.meaning-char {
+  font-family: 'Noto Serif SC', serif;
+  font-size: 56px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  display: block;
+}
+
+.char-qiao { color: var(--lime-dark); }
+.char-guo { color: var(--orange); }
+.char-chu { color: var(--grapefruit); }
+
+.meaning-card h3 {
+  font-size: 18px;
+  color: var(--text-dark);
+  margin-bottom: 8px;
+  letter-spacing: 2px;
+}
+
+.meaning-card p {
+  font-size: 14px;
+  color: var(--text-light);
+  line-height: 1.8;
+}
+
+.meaning-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+}
+
+.card-qiao::after { background: var(--lime); }
+.card-guo::after { background: var(--orange); }
+.card-chu::after { background: var(--grapefruit); }
+
+/* ============ PRODUCT PHILOSOPHY ============ */
+.philosophy {
+  background: linear-gradient(180deg, var(--citrus-cream) 0%, var(--white) 100%);
+}
+
+.philosophy-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.philosophy-quote {
+  font-family: 'Noto Serif SC', serif;
+  font-size: 24px;
+  color: var(--text-dark);
+  text-align: center;
+  line-height: 2;
+  margin-bottom: 40px;
+  position: relative;
+  padding: 0 40px;
+}
+
+.philosophy-quote::before,
+.philosophy-quote::after {
+  content: '\201C';
+  font-size: 80px;
+  color: var(--lime);
+  opacity: 0.4;
+  position: absolute;
+  font-family: Georgia, serif;
+  line-height: 1;
+}
+
+.philosophy-quote::before { top: -20px; left: 0; }
+.philosophy-quote::after { content: '\201D'; right: 0; bottom: -40px; }
+
+.philosophy-points {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.philosophy-point {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  padding: 24px;
+  background: var(--white);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-soft);
+}
+
+.philosophy-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  flex-shrink: 0;
+}
+
+.icon-fruit { background: #FFF3B0; }
+.icon-chain { background: #C8E6C9; }
+
+.philosophy-point h4 {
+  font-size: 15px;
+  color: var(--text-dark);
+  margin-bottom: 6px;
+}
+
+.philosophy-point p {
+  font-size: 13px;
+  color: var(--text-light);
+  line-height: 1.7;
+}
+
+/* ============ SELLING POINTS ============ */
+.selling-points {
+  background: var(--white);
+}
+
+.points-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.point-card {
+  padding: 32px;
+  border-radius: var(--radius-lg);
+  background: var(--citrus-cream);
+  border: 1px solid rgba(0,0,0,0.04);
+  transition: all 0.3s ease;
+}
+
+.point-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-card);
+}
+
+.point-icon-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.point-number {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: var(--lime);
+  color: var(--white);
+  font-size: 16px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.point-card h3 {
+  font-size: 17px;
+  color: var(--text-dark);
+  letter-spacing: 1px;
+}
+
+.point-card p {
+  font-size: 14px;
+  color: var(--text-light);
+  line-height: 1.8;
+}
+
+/* ============ BUSINESS MODEL ============ */
+.business-model {
+  background: linear-gradient(180deg, var(--page-bg) 0%, var(--mint) 50%, var(--page-bg) 100%);
+}
+
+.model-flow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  max-width: 900px;
+  margin: 0 auto 48px;
+}
+
+.model-step {
+  flex: 1;
+  min-width: 180px;
+  max-width: 200px;
+  text-align: center;
+  padding: 28px 16px;
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  position: relative;
+}
+
+.model-step-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  margin: 0 auto 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+}
+
+.step-ai { background: #E8EAF6; }
+.step-chain { background: #E0F2F1; }
+.step-sale { background: #FFF3E0; }
+.step-logistics { background: #FCE4EC; }
+
+.model-step h4 {
+  font-size: 15px;
+  color: var(--text-dark);
+  margin-bottom: 8px;
+}
+
+.model-step p {
+  font-size: 12px;
+  color: var(--text-light);
+  line-height: 1.7;
+}
+
+.model-arrow {
+  font-size: 24px;
+  color: var(--lime-dark);
+  flex-shrink: 0;
+}
+
+/* ============ COMPANY INTRO ============ */
+.company-intro {
+  background: var(--white);
+}
+
+.company-card {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 48px;
+  background: var(--citrus-cream);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-card);
+  position: relative;
+  overflow: hidden;
+}
+
+.company-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: linear-gradient(90deg, var(--lime), var(--orange), var(--grapefruit));
+}
+
+.company-name {
+  font-family: 'Noto Serif SC', serif;
+  font-size: 22px;
+  color: var(--text-dark);
+  margin-bottom: 24px;
+  letter-spacing: 2px;
+}
+
+.company-detail {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  margin-bottom: 16px;
+  font-size: 14px;
+  color: var(--text-body);
+}
+
+.company-label {
+  flex-shrink: 0;
+  padding: 4px 12px;
+  background: rgba(168,217,72,0.15);
+  color: var(--lime-dark);
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+/* ============ PRODUCT DETAIL - Premium Style ============ */
+.product-detail {
+  background: var(--white);
+  padding: 40px 0 80px;
+}
+
+.product-detail:nth-child(even) {
+  background: var(--page-bg);
+}
+
+.product-hero {
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: none;
+  margin-bottom: 0;
+  position: relative;
+}
+
+.product-hero-banner {
+  padding: 80px 60px;
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  background: linear-gradient(135deg, #FFFEF8 0%, #FFF9EF 50%, #FFFEF8 100%);
+  min-height: 520px;
+  position: relative;
+  overflow: hidden;
+}
+
+.product-hero-banner::before {
+  content: '';
+  position: absolute;
+  top: -80px;
+  right: -80px;
+  width: 420px;
+  height: 420px;
+  border-radius: 50%;
+  opacity: 0.06;
+  pointer-events: none;
+}
+
+.hero-lemon .product-hero-banner::before { background: radial-gradient(circle, #C6D630 0%, transparent 70%); }
+.hero-lemon .product-hero-banner { background: linear-gradient(135deg, #FFFFF5 0%, #F9FFE8 50%, #FFFFF5 100%); }
+.hero-orange .product-hero-banner::before { background: radial-gradient(circle, #FF9800 0%, transparent 70%); }
+.hero-orange .product-hero-banner { background: linear-gradient(135deg, #FFFBF5 0%, #FFF4E8 50%, #FFFBF5 100%); }
+.hero-grapefruit .product-hero-banner::before { background: radial-gradient(circle, #EF5350 0%, transparent 70%); }
+.hero-grapefruit .product-hero-banner { background: linear-gradient(135deg, #FFF5F5 0%, #FFECEF 50%, #FFF5F5 100%); }
+
+.product-visual {
+  flex: 1 1 55%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+}
+
+.product-visual img {
+  width: 100%;
+  max-width: 480px;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 20px 40px rgba(0,0,0,0.12));
+  transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.product-hero:hover .product-visual img {
+  transform: scale(1.03) translateY(-8px);
+}
+
+.product-info {
+  flex: 0 0 38%;
+  z-index: 2;
+  position: relative;
+}
+
+.product-info .color-dot {
+  display: inline-flex;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+}
+
+.hero-lemon .color-dot { background: linear-gradient(135deg, #C6D630, #A8D93A); }
+.hero-orange .color-dot { background: linear-gradient(135deg, #FFB74D, #FF9800); }
+.hero-grapefruit .color-dot { background: linear-gradient(135deg, #FF8A80, #EF5350); }
+
+.product-info h2 {
+  font-family: 'Noto Serif SC', serif;
+  font-size: 48px;
+  color: #1a1a1a;
+  margin-bottom: 12px;
+  letter-spacing: 6px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.product-info .product-subtitle {
+  font-size: 18px;
+  color: #666;
+  letter-spacing: 3px;
+  margin-bottom: 10px;
+  font-weight: 400;
+}
+
+.product-info .product-en {
+  font-size: 13px;
+  color: #999;
+  letter-spacing: 2px;
+  margin-bottom: 32px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.product-specs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.spec-item {
+  padding: 8px 18px;
+  background: rgba(255,255,255,0.85);
+  border-radius: 30px;
+  font-size: 13px;
+  color: #444;
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(0,0,0,0.05);
+  letter-spacing: 1px;
+}
+
+.spec-item strong {
+  color: #222;
+}
+
+/* Product Hero Responsive */
+@media (max-width: 900px) {
+  .product-hero-banner {
+    padding: 48px 32px;
+    flex-direction: column-reverse;
+    min-height: auto;
+    gap: 32px;
+  }
+  .product-info { flex: none; text-align: center; }
+  .product-visual { flex: none; }
+  .product-visual img { max-width: 320px; }
+  .product-info h2 { font-size: 36px; letter-spacing: 4px; }
+  .product-specs { justify-content: center; }
+}
+
+@media (max-width: 600px) {
+  .product-hero-banner { padding: 36px 20px; }
+  .product-info h2 { font-size: 28px; letter-spacing: 3px; }
+  .product-subtitle { font-size: 15px; }
+  .product-visual img { max-width: 260px; }
+}
+
+/* Product Detail Content */
+.product-detail-content {
+  background: var(--white);
+  padding: 48px;
+}
+
+.detail-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+
+.detail-section h3 {
+  font-size: 16px;
+  color: var(--text-dark);
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid var(--lime);
+  display: inline-block;
+}
+
+.detail-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.detail-table tr { border-bottom: 1px solid #F0EDE6; }
+.detail-table tr:last-child { border-bottom: none; }
+
+.detail-table td {
+  padding: 10px 0;
+  font-size: 13px;
+}
+
+.detail-table td:first-child {
+  color: var(--text-light);
+  width: 90px;
+  white-space: nowrap;
+}
+
+.detail-table td:last-child {
+  color: var(--text-dark);
+  font-weight: 500;
+}
+
+.highlight-box {
+  background: var(--citrus-cream);
+  border-radius: var(--radius-md);
+  padding: 24px;
+  margin-top: 16px;
+}
+
+.highlight-box h4 {
+  font-size: 14px;
+  color: var(--text-dark);
+  margin-bottom: 8px;
+}
+
+.highlight-box p {
+  font-size: 13px;
+  color: var(--text-light);
+  line-height: 1.8;
+}
+
+/* ============ PRODUCT GALLERY ============ */
+.product-gallery {
+  margin-top: 32px;
+  padding-top: 32px;
+  border-top: 1px solid #F0EDE6;
+}
+
+.product-gallery h3 {
+  font-size: 16px;
+  color: var(--text-dark);
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid var(--lime);
+  display: inline-block;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.gallery-item {
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  aspect-ratio: 1;
+}
+
+.gallery-item:hover {
+  transform: scale(1.03);
+  box-shadow: var(--shadow-card);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.gallery-detail {
+  margin-top: 16px;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+}
+
+.gallery-detail img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* ============ CONTACT ============ */
+.contact {
+  background: var(--white);
+  padding: 80px 0 120px;
+}
+
+/* ============ DETAIL PAGES SECTION ============ */
+.detail-pages-section {
+  background: linear-gradient(180deg, var(--page-bg) 0%, var(--citrus-cream) 100%);
+  padding: 80px 0;
+}
+
+.detail-pages-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.detail-page-card {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+.detail-page-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-hover);
+}
+
+.detail-page-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.detail-page-label {
+  padding: 14px 20px;
+  background: var(--white);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-dark);
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .detail-pages-grid { grid-template-columns: 1fr; max-width: 400px; }
+}
+
+.contact-card {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 56px;
+  background: linear-gradient(135deg, #E8F8D4 0%, #FFF9E6 100%);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-card);
+}
+
+.contact-card h2 {
+  font-family: 'Noto Serif SC', serif;
+  font-size: 28px;
+  color: var(--text-dark);
+  margin-bottom: 32px;
+  letter-spacing: 4px;
+}
+
+.contact-items {
+  display: flex;
+  justify-content: center;
+  gap: 48px;
+  flex-wrap: wrap;
+}
+
+.contact-item {
+  text-align: center;
+}
+
+.contact-item .label {
+  font-size: 13px;
+  color: var(--text-light);
+  margin-bottom: 8px;
+}
+
+.contact-item .value {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text-dark);
+  letter-spacing: 2px;
+}
+
+/* ============ FOOTER ============ */
+.footer {
+  text-align: center;
+  padding: 32px 24px;
+  background: var(--text-dark);
+  color: rgba(255,255,255,0.5);
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+
+.footer span {
+  color: var(--lime);
+}
+
+/* ============ NAVIGATION ============ */
+.top-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: rgba(255,255,255,0.92);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+  padding: 0 24px;
+  transform: translateY(-100%);
+  transition: transform 0.3s ease;
+}
+
+.top-nav.visible { transform: translateY(0); }
+
+.nav-inner {
+  max-width: 1080px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 56px;
+}
+
+.nav-logo {
+  font-family: 'Noto Serif SC', serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-dark);
+  letter-spacing: 4px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 32px;
+  list-style: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-light);
+  font-size: 13px;
+  letter-spacing: 1px;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover { color: var(--lime-dark); }
+
+/* ============ RESPONSIVE ============ */
+@media (max-width: 768px) {
+  .cover-logo { font-size: 48px; letter-spacing: 8px; }
+  .cover-tagline { font-size: 16px; letter-spacing: 3px; }
+  .meaning-grid { grid-template-columns: 1fr; max-width: 360px; }
+  .points-grid { grid-template-columns: 1fr; }
+  .philosophy-points { grid-template-columns: 1fr; }
+  .model-flow { flex-direction: column; }
+  .model-step { max-width: 100%; }
+  .model-arrow { transform: rotate(90deg); }
+  .product-hero-banner { flex-direction: column; padding: 40px 24px; text-align: center; }
+  .product-visual { flex: 0 0 auto; width: 200px; height: 240px; }
+  .product-specs { justify-content: center; }
+  .detail-grid { grid-template-columns: 1fr; }
+  .product-info h2 { font-size: 24px; }
+  .section-title { font-size: 28px; }
+  .company-card { padding: 32px; }
+  .contact-card { padding: 40px 24px; }
+  .contact-items { gap: 32px; }
+}
+
+/* ============ PRINT ============ */
+@media print {
+  /* Page setup for A4 landscape */
+  @page {
+    size: A4 landscape;
+    margin: 10mm 15mm;
+  }
+
+  /* Ensure colors print correctly */
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* Hide navigation and footer */
+  .top-nav,
+  .footer {
+    display: none !important;
+  }
+
+  /* Cover: reduce min-height for print */
+  .cover {
+    min-height: auto !important;
+    page-break-after: always;
+  }
+
+  /* Section: avoid page break inside */
+  section {
+    page-break-inside: avoid;
+  }
+
+  /* Product detail: avoid page break inside */
+  .product-detail {
+    page-break-inside: avoid;
+  }
+
+  /* Images: ensure they fit within page */
+  img {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+
+  /* Page breaks for major sections */
+  #brand { page-break-before: always; }
+  #philosophy { page-break-before: always; }
+  #selling-points { page-break-before: always; }
+  #business { page-break-before: always; }
+  #company { page-break-before: always; }
+  #products { page-break-before: always; }
+  #contact { page-break-before: always; }
+
+  /* Ensure backgrounds print */
+  body {
+    background: white !important;
+    -webkit-print-color-adjust: exact !important;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- ======== COVER ======== -->
+<div class="cover">
+  <div class="cover-content">
+    <h1 class="cover-logo">俏果初</h1>
+    <p class="cover-tagline">一杯"泡"出来的好果汁</p>
+    <div class="cover-product-chips">
+      <span class="cover-product-chip chip-lemon">大杯柠檬水</span>
+      <span class="cover-product-chip chip-orange">大杯脐橙饮</span>
+      <span class="cover-product-chip chip-grapefruit">金银花双柚饮</span>
+    </div>
+  </div>
+</div>
+
+<!-- ======== BRAND MEANING ======== -->
+<section class="brand-meaning" id="brand">
+  <div class="page-wrapper">
+    <div class="section-header">
+      <div class="section-number">01</div>
+      <h2 class="section-title">品牌释义</h2>
+      <div class="section-divider"></div>
+      <p class="section-subtitle">每一个字，都承载着我们对产品品质的坚持与承诺</p>
+    </div>
+    <div class="meaning-grid">
+      <div class="meaning-card card-qiao">
+        <span class="meaning-char char-qiao">俏</span>
+        <h3>清新俏丽</h3>
+        <p>品牌形象年轻活力，如同新鲜水果般清新脱俗。以"俏"字传递活力与生机，让每一杯饮品都充满灵动的生命力。</p>
+      </div>
+      <div class="meaning-card card-guo">
+        <span class="meaning-char char-guo">果</span>
+        <h3>真果真味</h3>
+        <p>坚持使用优质水果原料，从原产地直达生产。以"果"字彰显我们对原料品质的执着追求，让消费者品尝到水果最真实的味道。</p>
+      </div>
+      <div class="meaning-card card-chu">
+        <span class="meaning-char char-chu">初</span>
+        <h3>初心不改</h3>
+        <p>"初"代表着最初的美好——水果最本真的味道。我们以匠心守初心，用一杯好果汁还原大自然的馈赠，始终如一。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======== PRODUCT PHILOSOPHY ======== -->
+<section class="philosophy" id="philosophy">
+  <div class="page-wrapper">
+    <div class="section-header">
+      <div class="section-number">02</div>
+      <h2 class="section-title">产品理念</h2>
+      <div class="section-divider"></div>
+    </div>
+    <div class="philosophy-content">
+      <blockquote class="philosophy-quote">
+        优质水果原切，入杯即饮。我们重新定义鲜果饮品的体验方式，让每一杯都是自然与匠心的完美融合。
+      </blockquote>
+      <div class="philosophy-points">
+        <div class="philosophy-point">
+          <div class="philosophy-icon icon-fruit">&#127815;</div>
+          <div>
+            <h4>优选原产地水果</h4>
+            <p>从全球优质产区精选当季水果，源头品控，确保每一颗果实都达到最高标准。从枝头到杯中，锁住鲜果本味。</p>
+          </div>
+        </div>
+        <div class="philosophy-point">
+          <div class="philosophy-icon icon-chain">&#128666;</div>
+          <div>
+            <h4>全链路供应链管控</h4>
+            <p>搭建完善的供应链体系，从原料采购、生产加工到冷链运输，每个环节严格把控，确保产品品质稳定如一。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======== SELLING POINTS ======== -->
+<section class="selling-points" id="selling-points">
+  <div class="page-wrapper">
+    <div class="section-header">
+      <div class="section-number">03</div>
+      <h2 class="section-title">四大核心卖点</h2>
+      <div class="section-divider"></div>
+      <p class="section-subtitle">每一杯俏果初，都是对品质的极致追求</p>
+    </div>
+    <div class="points-grid">
+      <div class="point-card">
+        <div class="point-icon-row">
+          <div class="point-number">1</div>
+          <h3>真果汁"泡"出真鲜果</h3>
+        </div>
+        <p>采用独特"泡"制工艺，完整保留鲜果的天然风味与营养成分。每一口都能感受到真实果汁的醇厚口感，还原水果最本真的味道。</p>
+      </div>
+      <div class="point-card">
+        <div class="point-icon-row">
+          <div class="point-number">2</div>
+          <h3>食品专用PP材质</h3>
+        </div>
+        <p>杯体采用食品级PP材质，安全无毒无异味，符合国家食品安全标准。耐温性好，适合冷藏保存，让消费者安心享用每一杯。</p>
+      </div>
+      <div class="point-card">
+        <div class="point-icon-row">
+          <div class="point-number">3</div>
+          <h3>巴氏杀菌 低温锁鲜</h3>
+        </div>
+        <p>采用巴氏杀菌工艺，在有效杀灭有害微生物的同时，最大程度保留果汁的风味和营养。配合全程冷链运输，确保产品新鲜直达。</p>
+      </div>
+      <div class="point-card">
+        <div class="point-icon-row">
+          <div class="point-number">4</div>
+          <h3>体贴设计 便携随享</h3>
+        </div>
+        <p>杯身设计符合人体工学，握感舒适。密封性好，携带方便，无论是办公室小憩还是户外出行，都能随时随地享受一杯好果汁。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======== BUSINESS MODEL ======== -->
+<section class="business-model" id="business">
+  <div class="page-wrapper">
+    <div class="section-header">
+      <div class="section-number">04</div>
+      <h2 class="section-title">商业模式</h2>
+      <div class="section-divider"></div>
+      <p class="section-subtitle">科技赋能传统饮品，构建智能化运营体系</p>
+    </div>
+    <div class="model-flow">
+      <div class="model-step">
+        <div class="model-step-icon step-ai">&#129302;</div>
+        <h4>AI 赋能</h4>
+        <p>AI驱动的OPC智能运营体系，数据决策高效精准</p>
+      </div>
+      <div class="model-arrow">&#10140;</div>
+      <div class="model-step">
+        <div class="model-step-icon step-chain">&#128200;</div>
+        <h4>全链监控</h4>
+        <p>供应链全链路数字化监控，品质可视化管理</p>
+      </div>
+      <div class="model-arrow">&#10140;</div>
+      <div class="model-step">
+        <div class="model-step-icon step-sale">&#128176;</div>
+        <h4>以销定产</h4>
+        <p>基于市场数据的精准生产计划，降低库存风险</p>
+      </div>
+      <div class="model-arrow">&#10140;</div>
+      <div class="model-step">
+        <div class="model-step-icon step-logistics">&#128666;</div>
+        <h4>物流建设</h4>
+        <p>完善冷链物流网络，保障产品新鲜交付</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======== COMPANY INTRO ======== -->
+<section class="company-intro" id="company">
+  <div class="page-wrapper">
+    <div class="section-header">
+      <div class="section-number">05</div>
+      <h2 class="section-title">企业简介</h2>
+      <div class="section-divider"></div>
+    </div>
+    <div class="company-card">
+      <h3 class="company-name">苏州融冰青年互联网科技有限公司</h3>
+      <div class="company-detail">
+        <span class="company-label">成立时间</span>
+        <span>2021年10月</span>
+      </div>
+      <div class="company-detail">
+        <span class="company-label">企业定位</span>
+        <span>以AI技术赋能饮品行业，打造智能化鲜果饮品品牌</span>
+      </div>
+      <div class="company-detail">
+        <span class="company-label">业务范围</span>
+        <span>鲜果饮品研发、生产、销售及供应链管理</span>
+      </div>
+      <div class="company-detail">
+        <span class="company-label">渠道布局</span>
+        <span>罗森等大型商超便利店 / 社交媒体 / 电商平台</span>
+      </div>
+      <div class="company-detail">
+        <span class="company-label">企业愿景</span>
+        <span>让每一位消费者都能便捷地享受到一杯好果汁，用科技与匠心重新定义鲜果饮品体验</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======== PRODUCTS ======== -->
+<section id="products">
+  <div class="page-wrapper">
+
+    <!-- PRODUCT 1: Lemon -->
+    <div class="product-detail">
+      <div class="section-header">
+        <div class="section-number">06</div>
+        <h2 class="section-title">产品详情</h2>
+        <div class="section-divider"></div>
+      </div>
+
+      <div class="product-hero hero-lemon">
+        <div class="product-hero-banner">
+          <div class="product-info">
+            <div class="color-dot"></div>
+            <h2>大杯柠檬水</h2>
+            <div class="product-subtitle">柠檬 · 鲜榨果汁</div>
+            <div class="product-en">Lemonade · Fresh Squeezed</div>
+            <div class="product-specs">
+              <span class="spec-item"><strong>550ML</strong></span>
+              <span class="spec-item"><strong>20杯/箱</strong></span>
+              <span class="spec-item"><strong>保质期 60天</strong></span>
+            </div>
+          </div>
+          <div class="product-visual">
+            <img src="hd_lemonade.jpg" alt="大杯柠檬水">
+          </div>
+        </div>
+        <div class="product-detail-content">
+          <div class="detail-grid">
+            <div class="detail-section">
+              <h3>产品参数</h3>
+              <table class="detail-table">
+                <tr><td>产品名称</td><td>大杯柠檬水</td></tr>
+                <tr><td>净含量</td><td>550mL</td></tr>
+                <tr><td>箱规</td><td>20杯/箱</td></tr>
+                <tr><td>保质期</td><td>60天</td></tr>
+                <tr><td>贮存条件</td><td>0~5℃冷藏</td></tr>
+                <tr><td>零售价</td><td>￥4.9/杯</td></tr>
+              </table>
+            </div>
+            <div class="detail-section">
+              <h3>资质信息</h3>
+              <table class="detail-table">
+                <tr><td>配料</td><td>饮用水、鲜柠檬片、柠檬原汁、果蜜糖浆、柠檬片添加量2片≥16g /550ml</td></tr>
+                <tr><td>SC许可</td><td>SC10637152400875</td></tr>
+                <tr><td>执行标准</td><td>GB 7101</td></tr>
+              </table>
+            </div>
+          </div>
+          <div class="highlight-box">
+            <h4>产品亮点</h4>
+            <p>精选优质柠檬原汁，酸甜适中、清新爽口。采用"泡"制工艺完整保留柠檬的天然维C和清香风味，是夏季消暑、日常补水的理想选择。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PRODUCT 2: Orange -->
+    <div class="product-detail">
+      <div class="product-hero hero-orange">
+        <div class="product-hero-banner">
+          <div class="product-info">
+            <div class="color-dot"></div>
+            <h2>大杯脐橙饮</h2>
+            <div class="product-subtitle">脐橙 · 纯正果汁</div>
+            <div class="product-en">Navel Orange · Pure Juice</div>
+            <div class="product-specs">
+              <span class="spec-item"><strong>550ML</strong></span>
+              <span class="spec-item"><strong>20杯/箱</strong></span>
+              <span class="spec-item"><strong>保质期 60天</strong></span>
+            </div>
+          </div>
+          <div class="product-visual">
+            <img src="hd_orange_v2.jpg" alt="大杯脐橙饮">
+          </div>
+        </div>
+        <div class="product-detail-content">
+          <div class="detail-grid">
+            <div class="detail-section">
+              <h3>产品参数</h3>
+              <table class="detail-table">
+                <tr><td>产品名称</td><td>大杯脐橙饮</td></tr>
+                <tr><td>净含量</td><td>550mL</td></tr>
+                <tr><td>箱规</td><td>20杯/箱</td></tr>
+                <tr><td>保质期</td><td>60天</td></tr>
+                <tr><td>贮存条件</td><td>0~5℃冷藏</td></tr>
+                <tr><td>零售价</td><td>￥5.9/杯</td></tr>
+              </table>
+            </div>
+            <div class="detail-section">
+              <h3>资质信息</h3>
+              <table class="detail-table">
+                <tr><td>配料</td><td>饮用水、白砂糖、浓缩脐橙汁、脐橙片</td></tr>
+                <tr><td>SC许可</td><td>SC10637152400875</td></tr>
+                <tr><td>执行标准</td><td>GB/T 31121</td></tr>
+              </table>
+            </div>
+          </div>
+          <div class="highlight-box">
+            <h4>产品亮点</h4>
+            <p>甄选优质脐橙选优质脐橙产区鲜果，果香浓郁、口感醇厚。富含天然胡萝卜素和维C，每一口都是阳光般的温暖滋味，适合全年饮用。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PRODUCT 3: Grapefruit -->
+    <div class="product-detail">
+      <div class="product-hero hero-grapefruit">
+        <div class="product-hero-banner">
+          <div class="product-info">
+            <div class="color-dot"></div>
+            <h2>金银花双柚饮</h2>
+            <div class="product-subtitle">红心柚 · 草本果饮</div>
+            <div class="product-en">Honeysuckle Double Pomelo · Herbal Refresh</div>
+            <div class="product-specs">
+              <span class="spec-item"><strong>550ML</strong></span>
+              <span class="spec-item"><strong>20杯/箱</strong></span>
+              <span class="spec-item"><strong>保质期 120天</strong></span>
+            </div>
+          </div>
+          <div class="product-visual">
+            <img src="hd_grapefruit_v2.jpg" alt="金银花双柚饮">
+          </div>
+        </div>
+        <div class="product-detail-content">
+          <div class="detail-grid">
+            <div class="detail-section">
+              <h3>产品参数</h3>
+              <table class="detail-table">
+                <tr><td>产品名称</td><td>金银花双柚饮</td></tr>
+                <tr><td>净含量</td><td>550mL</td></tr>
+                <tr><td>箱规</td><td>20杯/箱</td></tr>
+                <tr><td>保质期</td><td>120天</td></tr>
+                <tr><td>贮存条件</td><td>0~5℃冷藏</td></tr>
+                <tr><td>零售价</td><td>￥5.9/杯</td></tr>
+              </table>
+            </div>
+            <div class="detail-section">
+              <h3>资质信息</h3>
+              <table class="detail-table">
+                <tr><td>配料</td><td>饮用水、果葡糖浆、胡柚汁、苹果浓缩汁、浓缩白西柚汁、柠檬酸、金银花浓缩汁</td></tr>
+                <tr><td>SC许可</td><td>SC10637152400875</td></tr>
+                <tr><td>执行标准</td><td>GB 7101</td></tr>
+              </table>
+            </div>
+          </div>
+          <div class="highlight-box">
+            <h4>产品亮点</h4>
+            <p>创新融合金银花草本精华与双柚原汁，清润去火、生津止渴。120天超长保质期，口感层次丰富——柚子的清甜搭配金银花的淡雅，打造独具特色的草本果饮体验。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ======== CONTACT ======== -->
+<section class="contact" id="contact">
+  <div class="page-wrapper">
+    <div class="section-header">
+      <div class="section-number">08</div>
+      <h2 class="section-title">联系我们</h2>
+      <div class="section-divider"></div>
+    </div>
+    <div class="contact-card">
+      <h2>期待与您合作</h2>
+      <div class="contact-items">
+        <div class="contact-item">
+          <div class="label">客服热线</div>
+          <div class="value">400-8533-009</div>
+        </div>
+        <div class="contact-item">
+          <div class="label">订货电话</div>
+          <div class="value">15542538357</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+// Scroll reveal animation
+const cards = document.querySelectorAll('.meaning-card, .point-card, .model-step, .product-hero, .philosophy-point');
+
+const revealObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  },
+  { threshold: 0.15 }
+);
+
+cards.forEach(card => {
+  card.style.opacity = '0';
+  card.style.transform = 'translateY(24px)';
+  card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+  revealObserver.observe(card);
+});
+</script>
+
+</body>
+</html>
